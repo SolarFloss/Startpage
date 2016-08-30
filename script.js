@@ -21,7 +21,7 @@ window.onload = function(){
   preWiki = "https://en.wikipedia.org/wiki/";
   reddit = "https://www.reddit.com"
   preYoutube = "https://www.youtube.com/results?search_query=";
-  clock();
+  dateInfo();
 }
 
 
@@ -47,11 +47,23 @@ function barHandle(){
   }
 }
 
-function clock(){
+function dateInfo(){
+  var months = ["Jan","Fed","March","April","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
+  var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var timeDisplay = document.getElementById("time");
+  var dateDisplay = document.getElementById("date");
+  var dayDisplay = document.getElementById("day");
+
+
   var date = new Date,
       hour = date.getHours(),
       minute = date.getMinutes(),
       second = date.getSeconds();
+      day = date.getDay();
+      month = date.getMonth();
+      year = date.getFullYear();
+      numberDate = date.getDate();
+
   if(date.getHours() < 10)
     hour = "0" + date.getHours();
   else {
@@ -70,8 +82,10 @@ function clock(){
     second = date.getSeconds();
   }
 
-  document.getElementById("time").innerHTML = hour + ":" + minute + ":" + second
-  setTimeout("clock()",1000);
+  timeDisplay.innerHTML = hour + ":" + minute + ":" + second;
+  dateDisplay.innerHTML = months[month] + " " + numberDate + ", " + year;
+  dayDisplay.innerHTML = days[day];
+  setTimeout("dateInfo()",1000);
 }
 
 function keyHandle(event){
