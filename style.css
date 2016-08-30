@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Rounded';
+  src: url('resources/Rounded.ttf') format('truetype');
+}
+
+body {
+  background-color: #52616b;
+  //background-image: url("resources/sea.jpg");
+  //background-size: 100%;
+}
+
+
+div.centerbox{
+  height: 25px;
+  width: 900px;
+  background-color: #595c5e;
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.36);
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  position: relative;
+  //opacity: .9;
+  top: 360;
+  padding: 10px 10px 10px 10px
+}
+
+
+
+#searchBar {
+  padding:8px 15px;
+  background:rgba(50, 50, 50, 0);
+  border:0px solid #595c5e;
+  width: 800px;
+  position: relative;
+  bottom: 10px;
+  opacity: 1;
+  text-decoration-color: #595c5e;
+  //margin: 100px auto 50px;
+}
+
+#searchButton {
+  border:2px solid #207cca;
+  background-color:#207cca;
+
+  padding: 6px 15px 5px;
+  top: -10px;
+  left: 10px;
+  width: 95px;
+  position: relative;
+  bottom: 2px;
+  height: 45px;
+
+}
+
+
+#searchButton:hover{
+  background-color:#1A609E;
+  border-color: #1A609E;
+}
+
+#searchButton:active{
+  background-color:#055296;
+  border-color: #055296;
+}
+
+#time{
+  font-size: 50px;
+  font-weight: bolder;
+  position: relative;
+  top: 350;
+  text-align: center;
+  font-family: Rounded;
+
+/*
+  background-color: #595c5e;
+  height: 50px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.36);
+*/
+}
+
+#weather{
+  position: relative;
+  font-size: 24px;
+  top: 380px;
+}
+
+
+::-webkit-input-placeholder {
+   color: white;
+}
