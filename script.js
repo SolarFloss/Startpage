@@ -110,7 +110,7 @@ function getWeather(){
       console.log(data);
       var weather = {};
       weather.temp = data.main.temp
-      weather.condition = data.weather[0].main;
+      weather.condition = data.weather[0].description;
       dispayWeather(weather);
     }
   };
@@ -127,13 +127,22 @@ function dispayWeather(weather){
 
 
   tempDisplay.innerHTML = temp;
-  if(conditions == "Clear"){
+  if(conditions == "clear sky"){
+    conditionsDisplay.alt = "Clear Skies";
     if(new Date().getHours() <= 18){
       conditionsDisplay.src = "resources/icons/clear day.png";
     }else{
       conditionsDisplay.src = "resources/icons/clear night.png";
     }
-  }else if(conditions == "Clouds"){
+  }else if(conditions == "few clouds"){
+    conditionsDisplay.alt = "Cloudy";
+    if(new Date().getHours() <= 18){
+      conditionsDisplay.src = "resources/icons/clouds day.png";
+    }else{
+      conditionsDisplay.src = "resources/icons/clouds night.png";
+    }
+  }else if(conditions == "scattered clouds"){
+    conditionsDisplay.alt = "Scattered Clouds";
     if(new Date().getHours() <= 18){
       conditionsDisplay.src = "resources/icons/clouds day.png";
     }else{
