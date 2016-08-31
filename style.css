@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #52616b;
+  background-color: #bdbdbd;
   //background-image: url("resources/sea.jpg");
   //background-size: 100%;
 }
@@ -13,7 +13,7 @@ body {
 div.centerbox{
   height: 25px;
   width: 900px;
-  background-color: #595c5e;
+  background-color: #9c9c9c;
   box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.36);
   border-radius: 2px;
   margin-left: auto;
@@ -50,7 +50,7 @@ div.centerbox{
   position: absolute;
   font-size: 50px;
   right: 0px;
-  font-size: 20px;
+  font-size: 22px;
   font-family: Rounded;
   font-weight: bolder;
 }
@@ -103,7 +103,7 @@ div.centerbox{
 #date{
   position: absolute;;
   font-family: Rounded;
-  font-size: 20px;
+  font-size: 22px;
   bottom: -5px;
   right: 0px;
   font-weight: bolder;

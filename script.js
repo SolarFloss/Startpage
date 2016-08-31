@@ -49,7 +49,7 @@ function barHandle(){
 }
 
 function dateInfo(){
-  
+
   var months = ["Jan","Fed","March","April","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
   var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   var timeDisplay = document.getElementById("time");
@@ -96,6 +96,7 @@ function keyHandle(event){
 }
 
 function getWeather(){
+
   var APPID = "63ea39292d2682b4b8db86a20e1a69dd";
   var url = "http://api.openweathermap.org/data/2.5/weather?" +
     "zip=" + 22191 +
@@ -121,7 +122,7 @@ function dispayWeather(weather){
   var conditions = weather.condition;
   var tempDisplay = document.getElementById("temperature");
   var conditionsDisplay = document.getElementById("conditions");
-  //var date = new Date)
+  console.log(conditions);
 
 
   tempDisplay.innerHTML = temp;
@@ -131,5 +132,13 @@ function dispayWeather(weather){
     }else{
       conditionsDisplay.src = "resources/icons/clear night.png";
     }
+  }else if(conditions == "Clouds"){
+    if(new Date().getHours() <= 18){
+      conditionsDisplay.src = "resources/icons/clouds day.png";
+    }else{
+      conditionsDisplay.src = "resources/icons/clouds night.png";
+    }
   }
+
+  console.log(conditionsDisplay.src);
 }
