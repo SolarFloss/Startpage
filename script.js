@@ -49,6 +49,7 @@ function barHandle(){
 }
 
 function dateInfo(){
+  
   var months = ["Jan","Fed","March","April","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
   var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   var timeDisplay = document.getElementById("time");
