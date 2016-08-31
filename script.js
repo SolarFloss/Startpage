@@ -22,6 +22,7 @@ window.onload = function(){
   reddit = "https://www.reddit.com"
   preYoutube = "https://www.youtube.com/results?search_query=";
   dateInfo();
+  getWeather();
 }
 
 
@@ -91,4 +92,30 @@ function dateInfo(){
 function keyHandle(event){
   if(event.keyCode == 13)
     barHandle();
+}
+
+function getWeather(){
+  var APPID = "63ea39292d2682b4b8db86a20e1a69dd";
+  var url = "http://api.openweathermap.org/data/2.5/weather?" +
+    "zip=" + 22191 +
+    ",us&APPID=" + APPID;
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+      var data = JSON.parse(xmlhttp.responseText);
+      var weather = {};
+      weather.temp = data.main.temp
+      weather.condition = data.weather[0].main;
+      dispayWeather(weather);
+    }
+  };
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send();
+
+}
+
+function dispayWeather(weather){
+  var temp = Math.round((weather.temp*1.8) - 459.4);
+  var conditions = weather.condition;
 }
