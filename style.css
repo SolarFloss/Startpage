@@ -37,11 +37,12 @@ div.centerbox{
 }
 
 #dateInfo{
+  position: absolute;
   height: inherit;
   width: 150px;
-  font-weight: bolder;
-  position: relative;
-  float: right;
+  right: 0px;
+  top: 0px;
+
   //background-color: #06cf28;
 }
 
@@ -51,24 +52,43 @@ div.centerbox{
   right: 0px;
   font-size: 20px;
   font-family: Rounded;
+  font-weight: bolder;
 }
 
-#date{
-  position: absolute;;
-  font-family: Rounded;
-  font-size: 50px;
-  font-size: 20px;
-  bottom: -5px;
-  right: 0px;
+#weather{
+  height: inherit;
+  width: 120px;
+  position: inherit;
+  //background-color: #06cf28;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+#temperature{
+  font-size: 50px;
+  font-family: Rounded;
+  font-weight: bolder;
+}
+
+#conditions{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+}
+
+
+
 
 #time{
   font-size: 50px;
   font-weight: bolder;
   position: relative;
-  text-align: left;
+  height: inherit;
   float: left;
   font-family: Rounded;
+  //background-color: #06cf28;
 
 /*
   background-color: #595c5e;
@@ -80,14 +100,25 @@ div.centerbox{
 */
 }
 
+#date{
+  position: absolute;;
+  font-family: Rounded;
+  font-size: 20px;
+  bottom: -5px;
+  right: 0px;
+  font-weight: bolder;
+}
+
 
 #searchBar {
   padding:8px 15px;
   background:rgba(50, 50, 50, 0);
   border:0px solid #595c5e;
   width: 800px;
-  position: relative;
-  bottom: 20px;
+  float: left;
+  position: absolute;
+  bottom: 7px;
+  left: 0px;
   opacity: 1;
   text-decoration-color: #595c5e;
   font-weight: bold;
@@ -97,14 +128,15 @@ div.centerbox{
 }
 
 #searchButton {
+  float: right;
   border:2px solid #207cca;
   background-color:#207cca;
 
   padding: 6px 15px 5px;
-  top: -20px;
-  left: 10px;
+  top: 0px;
+  right: 0px;
   width: 95px;
-  position: relative;
+  position: absolute;
   bottom: 2px;
   height: 45px;
 }
@@ -123,12 +155,6 @@ div.centerbox{
 }
 
 
-
-#weather{
-  position: relative;
-  font-size: 24px;
-  top: 380px;
-}
 
 
 ::-webkit-input-placeholder {

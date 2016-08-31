@@ -8,15 +8,18 @@
 
 
 <body>
-  <div class="layout" style="text-align: center">
-    <div id="info">
-      <div id="time" type="text">00:00:00</div>
-      <div id="dateInfo">
-        <div id="day" type="text">test</div>
-        <div id="date" type="text"></div>
-      </div>
+  <div id="info">
+    <div id="time" type="text">00:00:00</div>
+    <div id="weather">
+      <div id="temperature" style="text"></div>
+      <img id="conditions" src="">
     </div>
-
+    <div id="dateInfo">
+      <div id="day" type="text">test</div>
+      <div id="date" type="text"></div>
+    </div>
+  </div>
+  <div class="layout" style="text-align: center">
     <div class="centerbox" style="text-align: center">
       <input id="searchBar" type="text" placeholder="Search..." required>
       <input id="searchButton" type="button" value="Search">

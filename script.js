@@ -118,4 +118,17 @@ function getWeather(){
 function dispayWeather(weather){
   var temp = Math.round((weather.temp*1.8) - 459.4);
   var conditions = weather.condition;
+  var tempDisplay = document.getElementById("temperature");
+  var conditionsDisplay = document.getElementById("conditions");
+  //var date = new Date)
+
+
+  tempDisplay.innerHTML = temp;
+  if(conditions == "Clear"){
+    if(new Date().getHours() <= 18){
+      conditionsDisplay.src = "resources/icons/clear day.png";
+    }else{
+      conditionsDisplay.src = "resources/icons/clear night.png";
+    }
+  }
 }
