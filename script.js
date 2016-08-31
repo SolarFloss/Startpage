@@ -96,7 +96,6 @@ function keyHandle(event){
 }
 
 function getWeather(){
-
   var APPID = "63ea39292d2682b4b8db86a20e1a69dd";
   var url = "http://api.openweathermap.org/data/2.5/weather?" +
     "zip=" + 22191 +
