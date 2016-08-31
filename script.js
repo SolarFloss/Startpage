@@ -99,7 +99,7 @@ function getWeather(){
 
   var APPID = "63ea39292d2682b4b8db86a20e1a69dd";
   var url = "http://api.openweathermap.org/data/2.5/weather?" +
-    "zip=" + 22191 +
+    "id=" + 4794457 +
     ",us&APPID=" + APPID;
 
 
@@ -107,6 +107,7 @@ function getWeather(){
   xmlhttp.onreadystatechange = function(){
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
       var data = JSON.parse(xmlhttp.responseText);
+      console.log(data);
       var weather = {};
       weather.temp = data.main.temp
       weather.condition = data.weather[0].main;
@@ -123,7 +124,6 @@ function dispayWeather(weather){
   var conditions = weather.condition;
   var tempDisplay = document.getElementById("temperature");
   var conditionsDisplay = document.getElementById("conditions");
-  console.log(conditions);
 
 
   tempDisplay.innerHTML = temp;
@@ -141,5 +141,4 @@ function dispayWeather(weather){
     }
   }
 
-  console.log(conditionsDisplay.src);
 }
