@@ -148,6 +148,9 @@ function dispayWeather(weather){
     }else{
       conditionsDisplay.src = "resources/icons/clouds night.png";
     }
+  }else if(conditions == "broken clouds"){
+    conditionsDisplay.alt = "Broken Clouds";
+    conditionsDisplay.src = "resources/icons/broken clouds.png"
   }
 
 }

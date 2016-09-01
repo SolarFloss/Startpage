@@ -1,12 +1,22 @@
 @font-face {
   font-family: 'Rounded';
-  src: url('resources/Rounded.ttf') format('truetype');
+  src: url('resources/Fonts/Rounded.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Salt';
+  src: url('resources/Fonts/Salt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Masiode';
+  src: url('resources/Fonts/Masiode.ttf') format('truetype')
 }
 
 body {
   background-color: #bdbdbd;
-  //background-image: url("resources/sea.jpg");
-  //background-size: 100%;
+  background-image: url("resources/sea.jpg");
+  background-size: 100%;
 }
 
 
@@ -39,26 +49,30 @@ div.centerbox{
 #dateInfo{
   position: absolute;
   height: inherit;
-  width: 150px;
+  width: 165px;
   right: 0px;
   top: 0px;
-
-  //background-color: #06cf28;
+  //opacity: .5;
+  //background-color: #ffffff;
 }
 
 #day{
-
   position: absolute;
-  font-size: 50px;
   right: 0px;
-  font-size: 22px;
-  font-family: Rounded;
-  font-weight: bolder;
+  font-size: 27px;
+  font-family: Masiode;
+
+  text-shadow:
+  -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #ffffff;
 }
 
 #weather{
   height: inherit;
-  width: 120px;
+  width: 100px;
   position: inherit;
   //background-color: #06cf28;
   margin-left: auto;
@@ -67,8 +81,15 @@ div.centerbox{
 
 #temperature{
   font-size: 50px;
-  font-family: Rounded;
+  font-family: Masiode;
   font-weight: bolder;
+
+  text-shadow:
+  -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #ffffff;
 }
 
 #conditions{
@@ -89,9 +110,15 @@ div.centerbox{
   position: relative;
   height: inherit;
   float: left;
-  font-family: Rounded;
+  font-family: Masiode;
   //background-color: #06cf28;
 
+  text-shadow:
+  -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #ffffff;
 /*
   background-color: #595c5e;
   height: 50px;
@@ -104,11 +131,18 @@ div.centerbox{
 
 #date{
   position: absolute;
-  font-family: Rounded;
-  font-size: 22px;
+  font-family: Masiode;
+  font-size: 25px;
   bottom: -5px;
   right: 0px;
   font-weight: bolder;
+
+  text-shadow:
+  -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: #ffffff;
 }
 
 
