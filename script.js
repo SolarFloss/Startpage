@@ -21,7 +21,7 @@ window.onload = function(){
   preWiki = "https://en.wikipedia.org/wiki/";
   reddit = "https://www.reddit.com"
   preYoutube = "https://www.youtube.com/results?search_query=";
-  var backgrounds = ["1.png","2.jpg","3.jpg"];
+  var backgrounds = ["blue_plane.png","green_plane.jpg","sea.jpg"];
   num = backgrounds[Math.floor((Math.random() * backgrounds.length))];
   document.body.style.backgroundImage = "url('resources/Backgrounds/" + num + "')";
   //console.log(document.body.style.backgroundImage);
