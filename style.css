@@ -15,7 +15,8 @@
 
 body {
   background-color: #bdbdbd;
-  background-image: url("resources/sea.jpg");
+  background-attachment: local;;
+  //background-image: url("resources/Backgrounds/1.png");
   background-size: 100%;
 }
 
@@ -30,7 +31,7 @@ div.centerbox{
   margin-right: auto;
   opacity: 1;
   position: relative;
-  //opacity: .9;
+  opacity: .9;
   top: 360;
   padding: 10px 10px 10px 10px
 }
@@ -72,7 +73,7 @@ div.centerbox{
 
 #weather{
   height: inherit;
-  width: 100px;
+  width: 120px;
   position: inherit;
   //background-color: #06cf28;
   margin-left: auto;

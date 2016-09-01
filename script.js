@@ -21,7 +21,12 @@ window.onload = function(){
   preWiki = "https://en.wikipedia.org/wiki/";
   reddit = "https://www.reddit.com"
   preYoutube = "https://www.youtube.com/results?search_query=";
-  dateInfo();
+  var backgrounds = ["1.png","2.jpg","3.jpg"];
+  num = backgrounds[Math.floor((Math.random() * backgrounds.length))];
+  document.body.style.backgroundImage = "url('resources/Backgrounds/" + num + "')";
+  //console.log(document.body.style.backgroundImage);
+  //style="background-image: url('resources/Backgrounds/1.png')">
+  dateInfo()
   getWeather();
 }
 
@@ -151,6 +156,13 @@ function dispayWeather(weather){
   }else if(conditions == "broken clouds"){
     conditionsDisplay.alt = "Broken Clouds";
     conditionsDisplay.src = "resources/icons/broken clouds.png"
+  }else if(conditions == "light rain"){
+    conditionsDisplay.alt = "Light Rain";
+    if(new Date().getHours() <= 18){
+      conditionsDisplay.src = "resources/icons/rain day.png";
+    }else{
+      conditionsDisplay.src = "resources/icons/rain night.png";
+    }
   }
 
 }
